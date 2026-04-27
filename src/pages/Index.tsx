@@ -2,7 +2,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { curriculum } from "@/data/curriculum";
 import { ChapterSidebar } from "@/components/algebra/Sidebar";
 import { ConceptCard } from "@/components/algebra/ConceptCard";
-import { Search, Menu, Sigma } from "lucide-react";
+import { Search, Menu, Sigma, Zap } from "lucide-react";
+import { AnnotatedFormula } from "@/components/algebra/AnnotatedFormula";
+import { Calculator } from "@/components/algebra/Calculator";
+import { chapterInteractives } from "@/data/chapterInteractives";
 
 const colorTitle: Record<string, string> = {
   cyan: "text-neon-cyan glow-cyan",
@@ -164,6 +167,35 @@ const Index = () => {
                     <ConceptCard key={c.id} concept={c} color={ch.color} query={query} />
                   ))}
                 </div>
+
+                {chapterInteractives[ch.id] && (
+                  <div className="mt-6 rounded-xl border border-border bg-card/40 p-6">
+                    <div className={`flex items-center gap-2 mb-2 text-xs font-mono uppercase tracking-[0.2em] ${colorTitle[ch.color]}`}>
+                      <Zap className="h-3.5 w-3.5" />
+                      Interactive · {chapterInteractives[ch.id].title}
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-5 max-w-2xl">
+                      {chapterInteractives[ch.id].description}
+                    </p>
+                    <div className="grid gap-6 md:grid-cols-2">
+                      <div>
+                        <div className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground mb-2">
+                          Flagship formula · hover any variable
+                        </div>
+                        <AnnotatedFormula
+                          formula={chapterInteractives[ch.id].formula}
+                          tips={chapterInteractives[ch.id].tips}
+                          color={ch.color}
+                        />
+                      </div>
+                      <Calculator
+                        chapterId={ch.id}
+                        color={ch.color}
+                        spec={chapterInteractives[ch.id]}
+                      />
+                    </div>
+                  </div>
+                )}
               </section>
             ))
           )}
