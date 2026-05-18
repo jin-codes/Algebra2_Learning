@@ -2,4 +2,4 @@
 
 아래 링크를 확인해주세요. 
 
-[URL:https://algebra2.lovable.app/#](https://quotes-archive.lovable.app/#)
+[URL:https://algebra2.lovable.app/#](https://algebra2.lovable.app/#)
