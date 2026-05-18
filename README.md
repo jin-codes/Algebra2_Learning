@@ -1,3 +1,5 @@
-# Welcome to your Lovable project
+# 이것은 Lovable 로 만들어졌습니다. 
 
-TODO: Document your project here
+아래 링크를 확인해주세요. 
+
+[URL:](https://quotes-archive.lovable.app/#)
