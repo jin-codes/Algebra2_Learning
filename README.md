@@ -5,6 +5,11 @@
 
 **🔗 Live site: [algebra2learning.vercel.app](https://algebra2learning.vercel.app)**
 
+<p align="center">
+  <img src="docs/screenshot-home.webp" alt="Algebra 2 Reference home page" width="49%">
+  <img src="docs/screenshot-interactive.webp" alt="Interactive slope-intercept calculator" width="49%">
+</p>
+
 ---
 
 ## 소개 · About
@@ -102,3 +107,7 @@ src/
 ## 배포 · Deployment
 
 Vercel에 GitHub 저장소를 연결해 배포합니다 (Framework: Vite, Build: `npm run build`, Output: `dist`). `main`에 push하면 자동으로 재배포됩니다.
+
+## 라이선스 · License
+
+[MIT](LICENSE) © 2026 jin-codes
