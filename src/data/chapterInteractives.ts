@@ -383,7 +383,7 @@ export const chapterInteractives: Record<string, CalcSpec> = {
       )
         return "\\text{n and r must be non-negative integers}";
       if (v.r > v.n) return "C(n,r) = 0";
-      let r = Math.min(v.r, v.n - v.r);
+      const r = Math.min(v.r, v.n - v.r);
       let result = 1;
       for (let i = 0; i < r; i++) result = (result * (v.n - i)) / (i + 1);
       return `C(n,r) = ${fmt(result)}`;
